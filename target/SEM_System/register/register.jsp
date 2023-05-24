@@ -36,8 +36,7 @@
             <div class="inputBox"><input type="text" name="" placeholder="请输入联系电话"></div>
             <div class="inputBox"><input type="text" name="" placeholder="请输入辅导姓名"></div>
             <div class="inputBox"><input type="submit" id="register" value="注册"></div>
-            <p class="login">账号已注册?<a href="/login.jsp">Click here</a></p>
-            <p class="login">您是辅导员?<a href="/register2.jsp">Sign Up</a></p>
+            <p class="login">账号已注册?<a href="/Login/login.jsp">Click here</a></p>
           </form>
         </div>
       </div>

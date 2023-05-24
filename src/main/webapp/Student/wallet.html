@@ -20,6 +20,7 @@
         <link href="../css/bootstrap-icons.css" rel="stylesheet">
         <link href="../css/apexcharts.css" rel="stylesheet">
         <link href="../css/tooplate-mini-finance.css" rel="stylesheet">
+        <link href="../css/wallet.css" rel="stylesheet">
     </head>
     
     <body>
@@ -182,32 +183,82 @@
                 </nav>
 
                 <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
-                    <table border="1px" cellpadding="5px" cellspacing="1px">
-                        <tr>
-                            <td>就业单位</td>
-                            <td>就业单位地址</td>
-                            <td>就业岗位</td>
-                            <td>薪资待遇</td>
-                            <td>单位联系人</td>
-                            <td>单位联系人电话</td>
-                            <td>目前状态</td>
-                        </tr>
-                        <tr>
-                            <td>华为</td>
-                            <td>深圳</td>
-                            <td>Java工程师</td>
-                            <td>10k</td>
-                            <td>张三</td>
-                            <td>123456789</td>
-                            <td>
-                                <select name="" id="">
-                                    <option value="">在职</option>
-                                    <option value="">面试中</option>
-                                    <option value="">已离职</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="inputBox" id="poplayer">
+                        <input type="button" onclick="popDiv();" value="添加就业信息">
+                    </div>
+                    <div class="tableBox">
+                        <table border="1px" cellpadding="5px" cellspacing="1px">
+                            <tr>
+                                <td>就业单位</td>
+                                <td>就业单位地址</td>
+                                <td>就业岗位</td>
+                                <td>薪资待遇</td>
+                                <td>单位联系人</td>
+                                <td>单位联系人电话</td>
+                                <td>就业时间</td>
+                                <td>目前状态</td>
+                            </tr>
+                            <tr>
+                                <td>华为</td>
+                                <td>深圳</td>
+                                <td>Java工程师</td>
+                                <td>10k</td>
+                                <td>小狗</td>
+                                <td>1234567891</td>
+                                <td>2023.6</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">在职</option>
+                                        <option value="">面试中</option>
+                                        <option value="">已离职</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="popDiv">
+                        <div class="close">
+                            <a href="javascript:void(0)" onclick="closePop()">X</a>
+                        </div>
+                            <form action="" method="post">
+                                <div class="addBox">
+                                    <span>就业公司</span>
+                                    <input type="text">
+                                </div> 
+                                <div class="addBox">
+                                    <span>就业公司地址</span>
+                                    <input type="text">
+                                </div> 
+                                <div class="addBox">
+                                    <span>就业岗位</span>
+                                    <input type="text">
+                                </div>
+                                <div class="addBox">
+                                    <span>薪资待遇</span>
+                                    <input type="text">
+                                </div> 
+                                <div class="addBox"> 
+                                    <span>公司联系人</span>
+                                    <input type="text">
+                                </div> 
+                                <div class="addBox">
+                                    <span>公司联系人电话</span>
+                                    <input type="text">
+                                </div>
+                                <div class="addBox">
+                                    <span>就业时间</span>
+                                    <input type="text">
+                                </div>
+                                <div class="addBox">
+                                    <span>就业状态</span>
+                                    <input type="text">
+                                </div>
+                                <div class="addBox submit">
+                                    <input type="submit" value="提交">
+                                    <input type="reset" value="重置">
+                                </div>
+                            </form>
+                    </div>
                 </main>
 
             </div>
@@ -218,5 +269,6 @@
         <script src="../js/bootstrap.bundle.min.js"></script>
         <script src="../js/apexcharts.min.js"></script>
         <script src="../js/custom.js"></script>
+        <script src="../js/wallet.js"></script>
     </body>
 </html>
