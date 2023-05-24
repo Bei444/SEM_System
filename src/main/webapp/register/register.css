@@ -1,0 +1,116 @@
+@font-face {
+    font-family: '11';
+    src: url(../font/MaoKenWangXingYuan-2.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '11';
+    letter-spacing: 3x
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/2.png);
+    
+}
+
+.box{
+    position: relative;
+    margin: auto;
+}
+.container{
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.form{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.form h2{
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+.form h2::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: #fff;
+}
+.form input{
+    width: 100%;
+    margin-top: 20px;
+}
+.form .inputBox .radio{
+    width: 20px;
+}
+.form .inputBox input{
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.form .radio{
+    width: 20px;
+    margin-left: 0px;
+}
+.form .inputBox input::placeholder
+{
+    color: #fff;
+}
+.form .inputBox input[type="submit"]
+{
+    background: #fff;
+    color: #666;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    margin-left: 100px;
+}
+.login{
+    margin-top: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.login a{
+    color: #fff;
+    letter-spacing: 1px;
+    padding-left: 5px;
+}
