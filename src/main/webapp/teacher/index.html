@@ -6,22 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>学生就业管理系统-实习就业管理</title>
+    <title>学生就业管理系统-首页</title>
 
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
-
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/bootstrap-icons.css" rel="stylesheet">
     <link href="../css/apexcharts.css" rel="stylesheet">
     <link href="../css/tooplate-mini-finance.css" rel="stylesheet">
-    <link href="../css/wallet.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
@@ -43,23 +39,25 @@
             action="#" method="get" role="form">
             <input class="form-control" name="search" type="text" placeholder="Search" aria-label="Search">
         </form>
+
         <div class="navbar-nav me-lg-2">
             <div class="nav-item text-nowrap d-flex align-items-center">
-                <!-- 消息提示 -->
                 <div class="dropdown ps-3">
                     <a class="nav-link dropdown-toggle text-center" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                        aria-expanded="false" id="navbarLightDropdownMenuLink">
                         <i class="bi-bell"></i>
                         <span
                             class="position-absolute start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
                             <span class="visually-hidden">New alerts</span>
                         </span>
                     </a>
-                    <ul class="dropdown-menu notifications-block-wrap bg-white shadow">
+
+                    <ul class="dropdown-menu dropdown-menu-lg-end notifications-block-wrap bg-white shadow"
+                        aria-labelledby="navbarLightDropdownMenuLink">
                         <small>Notifications</small>
 
                         <li class="notifications-block border-bottom pb-2 mb-2">
-                            <a class="dropdown-item d-flex align-items-center" href="#">
+                            <a class="dropdown-item d-flex  align-items-center" href="#">
                                 <div class="notifications-icon-wrap bg-success">
                                     <i class="notifications-icon bi-check-circle-fill"></i>
                                 </div>
@@ -94,13 +92,14 @@
 
                                 <div>
                                     <span>Account verification failed.</span>
+
                                     <p>1 hour ago</p>
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <!-- 头像导航栏 -->
+
                 <div class="dropdown px-3">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -145,13 +144,12 @@
     </header>
 
     <div class="container-fluid">
-        <!-- 左侧导航栏 -->
         <div class="row">
             <nav id="sidebarMenu" class="col-md-3 col-lg-3 d-md-block sidebar collapse">
                 <div class="position-sticky py-4 px-3 sidebar-sticky">
                     <ul class="nav flex-column h-100">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">
+                            <a class="nav-link active" aria-current="page" href="index.html">
                                 <i class="bi-house-fill me-2"></i>
                                 首页
                             </a>
@@ -165,12 +163,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="wallet.html">
+                            <a class="nav-link" href="wallet.html">
                                 <i class="bi-wallet me-2"></i>
                                 实习就业管理
                             </a>
                         </li>
-
 
                         <li class="nav-item">
                             <a class="nav-link" href="setting.html">
@@ -178,6 +175,7 @@
                                 设置
                             </a>
                         </li>
+
 
                         <li class="nav-item border-top mt-auto pt-2">
                             <a class="nav-link" href="#">
@@ -190,82 +188,11 @@
             </nav>
 
             <main class="main-wrapper col-md-9 ms-sm-auto py-4 col-lg-9 px-md-4 border-start">
-                <div class="inputBox" id="poplayer">
-                    <input type="button" onclick="popDiv();" value="添加就业信息">
+                <div class="title-group mb-3">
+                    <!-- <h1 class="h2 mb-0">首页</h1> -->
                 </div>
-                <div class="tableBox">
-                    <table border="1px" cellpadding="5px" cellspacing="1px">
-                        <tr>
-                            <th>就业时间</th>
-                            <th>就业单位</th>
-                            <th>就业单位地址</th>
-                            <th>就业岗位</th>
-                            <th>薪资待遇</th>
-                            <th>单位联系人</th>
-                            <th>单位联系人电话</th>
-                            <th>目前状态</th>
-                            <th>操作</th>
-                        </tr>
-                        <tr>
-                            <td>2023.6</td>
-                            <td>华为</td>
-                            <td>深圳</td>
-                            <td>Java工程师</td>
-                            <td>10k</td>
-                            <td>小狗</td>
-                            <td>1234567891</td>
-                            <td>在职</td>
-                            <td>
-                                <a href="#" onclick="popDiv()">修改</a>
-                                <a href="#">删除</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="popDiv">
-                    <div class="close">
-                        <a href="javascript:void(0)" onclick="closePop()">X</a>
-                    </div>
-                    <form action="" method="post">
-                        <div class="addBox">
-                            <span>就业时间</span>
-                            <input type="text">
-                        </div>
-                        <div class="addBox">
-                            <span>就业公司</span>
-                            <input type="text">
-                        </div>
-                        <div class="addBox">
-                            <span>就业公司地址</span>
-                            <input type="text">
-                        </div>
-                        <div class="addBox">
-                            <span>就业岗位</span>
-                            <input type="text">
-                        </div>
-                        <div class="addBox">
-                            <span>薪资待遇</span>
-                            <input type="text">
-                        </div>
-                        <div class="addBox">
-                            <span>公司联系人</span>
-                            <input type="text">
-                        </div>
-                        <div class="addBox">
-                            <span>公司联系人电话</span>
-                            <input type="text">
-                        </div>
-                        <div class="addBox">
-                            <span>就业状态</span>
-                            <input type="radio" class="radio" name="">在职
-                            <input type="radio" class="radio" name="">面试中
-                            <input type="radio" class="radio" name="">已离职
-                        </div>
-                        <div class="addBox submit">
-                            <input type="submit" value="提交">
-                            <input type="reset" value="重置">
-                        </div>
-                    </form>
+                <div class="welcome">
+                    <p>欢迎使用 基于SSM框架的学生就业管理系统</p>
                 </div>
             </main>
 
@@ -277,7 +204,87 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/apexcharts.min.js"></script>
     <script src="../js/custom.js"></script>
-    <script src="../js/wallet.js"></script>
+
+    <script type="text/javascript">
+        var options = {
+            series: [13, 43, 22],
+            chart: {
+                width: 380,
+                type: 'pie',
+            },
+            labels: ['Balance', 'Expense', 'Credit Loan',],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#pie-chart"), options);
+        chart.render();
+    </script>
+
+    <script type="text/javascript">
+        var options = {
+            series: [{
+                name: 'Income',
+                data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+            }, {
+                name: 'Expense',
+                data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+            }, {
+                name: 'Transfer',
+                data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+            }],
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '55%',
+                    endingShape: 'rounded'
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            xaxis: {
+                categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            },
+            yaxis: {
+                title: {
+                    text: '$ (thousands)'
+                }
+            },
+            fill: {
+                opacity: 1
+            },
+            tooltip: {
+                y: {
+                    formatter: function (val) {
+                        return "$ " + val + " thousands"
+                    }
+                }
+            }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+
 </body>
 
 </html>
