@@ -7,7 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: '11';
-    letter-spacing: 3x
+    letter-spacing: 3px;
+    color: #2e2d2d;
 }
 body{
     overflow: hidden;
@@ -48,7 +49,7 @@ section{
 }
 .form h2{
     position: relative;
-    color: #fff;
+    /* color: #fff; */
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -61,7 +62,7 @@ section{
     bottom: -10px;
     width: 80px;
     height: 4px;
-    background: #fff;
+    background: #2e2d2d;
 }
 .form input{
     width: 100%;
@@ -82,7 +83,7 @@ section{
     border-bottom: 1px solid rgba(255,255,255,0.2);
     font-size: 16px;
     letter-spacing: 1px;
-    color: #fff;
+    /* color: #fff; */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .form .radio{
@@ -91,7 +92,7 @@ section{
 }
 .form .inputBox input::placeholder
 {
-    color: #fff;
+    /* color: #fff; */
 }
 .form .inputBox input[type="submit"]
 {
@@ -105,12 +106,12 @@ section{
 }
 .login{
     margin-top: 5px;
-    color: #fff;
+    /* color: #fff; */
     letter-spacing: 1px;
 }
 
 .login a{
-    color: #fff;
+    /* color: #fff; */
     letter-spacing: 1px;
     padding-left: 5px;
 }

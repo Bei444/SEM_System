@@ -29,7 +29,7 @@
                 <input type="radio" class="radio" name="userIdentity" value="admin">管理员
             </div>
             <div class="inputBox"><input type="submit" id="login" value="登录"></div>
-            <p class="register">账号未注册?<a href="/register.jsp">Sign Up</a></p>
+            <p class="register">账号未注册?<a href="/register/register.jsp">Sign Up</a></p>
           </form>
         </div>
       </div>

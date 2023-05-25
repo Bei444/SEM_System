@@ -8,6 +8,6 @@
         <setting name="logImpl" value="LOG4J2"/>
     </settings>
     <mappers>
-        <mapper class="com.hgkj.model.dao.CardDao"/>
+<!--        <mapper class=""/>-->
     </mappers>
 </configuration>

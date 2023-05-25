@@ -29,7 +29,7 @@
 <body>
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/student/index.jsp">
             <i class="bi-box"></i>
             学生就业管理系统
         </a>
@@ -131,7 +131,7 @@
                     </li>
 
                     <li class="border-top mt-3 pt-2 mx-4">
-                        <a class="dropdown-item ms-0 me-0" href="/Login/login.jsp">
+                        <a class="dropdown-item ms-0 me-0" href="#">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>
@@ -148,15 +148,14 @@
             <div class="position-sticky py-4 px-3 sidebar-sticky">
                 <ul class="nav flex-column h-100">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/student/index.jsp">
+                        <a class="nav-link active" aria-current="page" href="/student/index.jsp">
                             <i class="bi-house-fill me-2"></i>
                             首页
                         </a>
                     </li>
 
-
                     <li class="nav-item">
-                        <a class="nav-link active" href="/student/profile.jsp">
+                        <a class="nav-link" href="/student/profile.jsp">
                             <i class="bi-person me-2"></i>
                             个人中心
                         </a>
@@ -169,7 +168,6 @@
                         </a>
                     </li>
 
-
                     <li class="nav-item">
                         <a class="nav-link" href="/student/setting.jsp">
                             <i class="bi-gear me-2"></i>
@@ -177,8 +175,9 @@
                         </a>
                     </li>
 
+
                     <li class="nav-item border-top mt-auto pt-2">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/Login/login.jsp">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>

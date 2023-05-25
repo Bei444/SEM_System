@@ -22,8 +22,8 @@
           <h2>学生就业管理系统</h2>
           <form action="/login" method="post" >
             <div class="inputBox"><input type="text" name="userId" placeholder="请输入学号"></div>
-            <div class="inputBox"><input type="password" name="userPwd" placeholder="请输入密码"></div>
             <div class="inputBox"><input type="text" name="userName" placeholder="请输入姓名"></div>
+            <div class="inputBox"><input type="password" name="userPwd" placeholder="请输入密码"></div>
             <div class="inputBox">
               <input type="text" list="sexlist" placeholder="请选择您的性别">
               <datalist id="sexlist">

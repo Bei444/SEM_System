@@ -11,9 +11,11 @@
     border-radius: 5px;
     z-index: 3;
     width: 300px;
-    height: 400px;
+    min-height: 400px;
     position:fixed;
-    left: 70%;
+    padding-bottom: 10px;
+    left: 50%;
+    top: 30%;
     /* top: 200px; */
     backdrop-filter: blur(5px);
     box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
@@ -28,7 +30,8 @@
     margin-right: 20px;
 
 }
-.addBox input{
+.addBox input,
+.searchBox input{
     width: 60%;
     background: rgba(255,255,255,0.2);
     border: none;
@@ -108,4 +111,41 @@ table tr th {
     table td, table th {
     padding: 5px 10px;    
     text-align: center;
+    }
+
+    /* ------------------------- */
+    .search{
+        display: flex;
+        /* height: 140px; */
+        max-width: 1080px;
+        margin-bottom: 20px;
+        border: 1px solid #666;
+        padding: 30px;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255,255,255,0.5);
+        border-right: 1px solid rgba(255,255,255,0.2);
+    }
+    .searchBox{
+        float: left;
+        display: flex;
+        max-height: 30px;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .searchBox input{
+        display: flex;
+        width: 80%;
+        min-width: 90px;
+    }
+    .searchBox input[type="button"],
+    .searchBox input[type="reset"]
+    {
+        position: absolute;
+        max-width: 50px;
+        left: 800px;
+        bottom: 20px;
+    }
+    .search input[type="reset"]{
+        margin-left: 100px;
     }
