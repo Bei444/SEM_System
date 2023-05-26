@@ -252,7 +252,7 @@
                 <form action="" method="post">
                     <div class="addBox">
                         <span>就业时间</span>
-                        <input type="text">
+                        <input type="date">
                     </div>
                     <div class="addBox">
                         <span>就业公司</span>

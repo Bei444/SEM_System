@@ -5,9 +5,17 @@
 <configuration>
 
     <settings>
-        <setting name="logImpl" value="LOG4J2"/>
+        <setting name="logImpl" value="LOG4J"/>
     </settings>
+    <typeAliases>
+        <!-- 配置数据类型的别名 -->
+        <typeAlias type="com.hgkj.model.entity.User" alias="User"/>
+        <typeAlias type="com.hgkj.model.entity.Student" alias="Student"/>
+        <typeAlias type="com.hgkj.model.entity.Teacher" alias="Teacher"/>
+    </typeAliases>
     <mappers>
-<!--        <mapper class=""/>-->
+        <mapper class="com.hgkj.model.dao.UserDao"/>
+        <mapper class="com.hgkj.model.dao.StudentDao"/>
+        <mapper class="com.hgkj.model.dao.TeacherDao"/>
     </mappers>
 </configuration>

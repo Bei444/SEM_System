@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -110,8 +111,8 @@
                             <!-- <img src="../images/medium-shot-happy-man-smiling.jpg" class="profile-image img-fluid me-3" alt=""> -->
 
                             <div class="d-flex flex-column">
-                                <small>${userName}</small>
-                                <a href="#">${userId}</a>
+                                <small>${student.studentName}</small>
+                                <a href="#">${student.studentId}</a>
                             </div>
                         </div>
                     </li>
@@ -207,38 +208,22 @@
                                     <a href="setting.html" class="bi-pencil-square custom-block-edit-icon"></a>
                                 </div>
                             </div> -->
-
+                    <c:forEach items="student" var="student">
                             <div class="col-lg-9 col-12">
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>姓名:</strong>
-                                    <span>${userName}</span>
+                                    <span>${student.studentName}</span>
                                 </p>
 
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>学号:</strong>
-                                    <span>
-                                        ${userId}
-                                    </span>
+                                    <span>${student.studentId}</span>
                                 </p>
 
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>联系方式:</strong>
-                                    <span>
-                                                (60) 12 345 6789
-                                            </span>
+                                    <span>${student.studentTel}</span>
                                 </p>
-                                <!--
-                                                                        <p class="d-flex flex-wrap mb-2">
-                                                                            <strong>Birthday:</strong>
-
-                                                                            <span>March 5, 1992</span>
-                                                                        </p>
-
-                                                                        <p class="d-flex flex-wrap">
-                                                                            <strong>Address:</strong>
-
-                                                                            <span>551 Swanston Street, Melbourne</span>
-                                                                        </p> -->
                             </div>
                         </div>
                     </div>
@@ -248,24 +233,26 @@
 
                         <p class="d-flex flex-wrap mb-2">
                             <strong>班级:</strong>
-                            <span>XXXXX</span>
+                            <span>${student.classes}</span>
                         </p>
 
                         <p class="d-flex flex-wrap mb-2">
                             <strong>专业:</strong>
-                            <span>XXXXXXXX</span>
+                            <span>${student.major}</span>
                         </p>
 
                         <p class="d-flex flex-wrap mb-2">
                             <strong>辅导员:</strong>
-                            <span>XXX</span>
+                            <span>${teacher.teacherName}</span>
                         </p>
 
                         <p class="d-flex flex-wrap mb-2">
                             <strong>辅导员联系方式:</strong>
-                            <span>12345678910</span>
+                            <span>${teacher.teacherTel}</span>
                         </p>
                     </div>
+                    </c:forEach>
+
                 </div>
 
                 <div class="col-lg-5 col-12">

@@ -20,21 +20,21 @@
       <div class="container">
         <div class="form">
           <h2>学生就业管理系统</h2>
-          <form action="/login" method="post" >
-            <div class="inputBox"><input type="text" name="userId" placeholder="请输入学号"></div>
-            <div class="inputBox"><input type="text" name="userName" placeholder="请输入姓名"></div>
-            <div class="inputBox"><input type="password" name="userPwd" placeholder="请输入密码"></div>
+          <form id="stuRegister" action="/StudentRegister" method="post" >
+            <div class="inputBox"><input type="text" name="studentId" placeholder="请输入学号"></div>
+            <div class="inputBox"><input type="text" name="studentName" placeholder="请输入姓名"></div>
+            <div class="inputBox"><input type="password" name="studentPwd" placeholder="请输入密码"></div>
             <div class="inputBox">
-              <input type="text" list="sexlist" placeholder="请选择您的性别">
+              <input type="text" name="studentSex" list="sexlist" placeholder="请选择您的性别">
               <datalist id="sexlist">
                 <option name="man">男</option>
                 <option name="women">女</option>
               </datalist>
             </div>
-            <div class="inputBox"><input type="text" name="" placeholder="请输入班级"></div>
-            <div class="inputBox"><input type="text" name="" placeholder="请输入专业"></div>
-            <div class="inputBox"><input type="text" name="" placeholder="请输入联系电话"></div>
-            <div class="inputBox"><input type="text" name="" placeholder="请输入辅导姓名"></div>
+            <div class="inputBox"><input type="text" name="major" placeholder="请输入专业"></div>
+            <div class="inputBox"><input type="text" name="classes" placeholder="请输入班级"></div>
+            <div class="inputBox"><input type="text" name="studentTel" placeholder="请输入联系电话" pattern="[0-9]{11}"></div>
+            <div class="inputBox"><input type="text" name="teacherName" placeholder="请输入辅导姓名"></div>
             <div class="inputBox"><input type="submit" id="register" value="注册"></div>
             <p class="login">账号已注册?<a href="/Login/login.jsp">Click here</a></p>
           </form>
