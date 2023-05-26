@@ -15,10 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="/index/css/bootstrap.min.css" rel="stylesheet">
-    <link href="index/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="index/css/apexcharts.css" rel="stylesheet">
-    <link href="index/css/tooplate-mini-finance.css" rel="stylesheet">
-    <link href="index/css/wallet.css" rel="stylesheet">
+    <link href="/index/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/index/css/apexcharts.css" rel="stylesheet">
+    <link href="/index/css/tooplate-mini-finance.css" rel="stylesheet">
+    <link href="/index/css/wallet.css" rel="stylesheet">
 </head>
 
 <body>
@@ -163,7 +163,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="setting.html">
+                            <a class="nav-link" href="/index/admin/setting.html">
                                 <i class="bi-gear me-2"></i>
                                 设置
                             </a>
@@ -184,11 +184,12 @@
                 <h5>搜索条件</h5>
                 <div class="search">
                     <form action="" method="post">
+                        <div class="searchBox">工号<input type="text"></div>
+                        <div class="searchBox">姓名<input type="text"></div>
+                        <div class="searchBox">性别<input type="text"></div> 
+                        <div class="searchBox">学院<input type="text"></div>
                         <div class="searchBox">专业<input type="text"></div>
-                        <div class="searchBox">班级<input type="text"></div>
-                        <div class="searchBox">性别<input type="text"></div>
-                        <div class="searchBox">公司<input type="text"></div>
-                        <div class="searchBox">岗位<input type="text"></div>
+                        
                         <div class="searchBox">
                             <input type="button" value="查询">
                             <input type="reset" value="重置">
@@ -197,7 +198,7 @@
                 </div>
                 <!--  信息显示表格   -->
                 <div class="inputBox" id="poplayer">
-                    <input type="button" onclick="popDiv();" value="添加就业信息">
+                    <input type="button" onclick="popDiv();" value="添加辅导员信息">
                 </div>
                 <div class="tableBox">
                     <table border="1px" cellpadding="5px" cellspacing="1px">
@@ -231,15 +232,31 @@
                     </div>
                     <form action="" method="post">
                         <div class="addBox">
-                            <span>就业时间</span>
+                            <span>工号</span>
                             <input type="text">
                         </div>
                         <div class="addBox">
-                            <span>就业公司</span>
+                            <span>姓名</span>
                             <input type="text">
                         </div>
                         <div class="addBox">
-                            <span>就业公司地址</span>
+                            <span>性别</span>
+                            <input type="text" list="sexlist" placeholder="请选择您的性别">
+                            <datalist id="sexlist">
+                                <option name="man">男</option>
+                                <option name="women">女</option>
+                            </datalist>
+                        </div>
+                        <div class="addBox">
+                            <span>学院</span>
+                            <input type="text">
+                        </div>
+                        <div class="addBox">
+                            <span>专业</span>
+                            <input type="text">
+                        </div>
+                        <div class="addBox">
+                            <span>联系方式</span>
                             <input type="text">
                         </div>
                         <div class="addBox submit">
