@@ -193,7 +193,7 @@
                 <h1 class="h2 mb-0">个人信息</h1>
             </div>
 
-            <div class="row my-4">
+            <div class="row my-4" >
                 <div class="col-lg-7 col-12">
                     <div class="custom-block custom-block-profile">
                         <div class="row">
@@ -250,7 +250,6 @@
                             <span>${teacher.teacherTel}</span>
                         </p>
                     </div>
-
                 </div>
 
                 <div class="col-lg-5 col-12">

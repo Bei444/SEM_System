@@ -193,7 +193,7 @@
                 <h1 class="h2 mb-0">个人信息</h1>
             </div>
 
-            <div class="row my-4">
+            <div class="row my-4" >
                 <div class="col-lg-7 col-12">
                     <div class="custom-block custom-block-profile">
                         <div class="row">
@@ -208,7 +208,6 @@
                                     <a href="setting.html" class="bi-pencil-square custom-block-edit-icon"></a>
                                 </div>
                             </div> -->
-                    <c:forEach items="student" var="student">
                             <div class="col-lg-9 col-12">
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>姓名:</strong>
@@ -251,8 +250,6 @@
                             <span>${teacher.teacherTel}</span>
                         </p>
                     </div>
-                    </c:forEach>
-
                 </div>
 
                 <div class="col-lg-5 col-12">
