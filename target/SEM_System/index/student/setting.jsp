@@ -167,7 +167,12 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="profile-tab" data-bs-toggle="tab"
                                         data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                        aria-controls="profile-tab-pane" aria-selected="true">修改密码</button>
+                                        aria-controls="profile-tab-pane" aria-selected="true">修改个人信息</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="password-tab" data-bs-toggle="tab"
+                                        data-bs-target="#password-tab-pane" type="button" role="tab"
+                                        aria-controls="password-tab-pane" aria-selected="true">修改密码</button>
                             </li>
 
                             <li class="nav-item" role="presentation">
@@ -178,10 +183,34 @@
                                     <button class="nav-link" id="notification-tab" data-bs-toggle="tab" data-bs-target="#notification-tab-pane" type="button" role="tab" aria-controls="notification-tab-pane" aria-selected="false">通知</button>
                                 </li> -->
                         </ul>
+
                         <div class="tab-content" id="myTabContent">
-                            <!-- 修改密码 -->
                             <div class="tab-pane fade show active" id="profile-tab-pane" role="tabpanel"
                                  aria-labelledby="profile-tab" tabindex="0">
+                                <h6 class="mb-4">个人信息</h6>
+
+                                <form class="custom-form profile-form" action="#" method="post" role="form">
+                                    <input type="text" name="major" id="major" pattern=""
+                                           class="form-control" placeholder="请输入专业" required="">
+
+                                    <input type="text" name="phone" id="phone"
+                                           pattern="[0-9]{1,11}" class="form-control" placeholder="请输入联系方式"
+                                           required="">
+
+                                    <div class="d-flex">
+                                        <%--                                        <button type="button" class="form-control me-3">--%>
+                                        <%--                                            重置--%>
+                                        <%--                                        </button>--%>
+
+                                        <button type="submit" class="form-control ms-2">
+                                            保存
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- 修改密码 -->
+                            <div class="tab-pane fade" id="password-tab-pane" role="tabpanel"
+                                 aria-labelledby="password-tab" tabindex="0">
                                 <h6 class="mb-4">密码</h6>
 
                                 <form class="custom-form password-form" action="#" method="post" role="form">
@@ -197,9 +226,9 @@
                                            required="">
 
                                     <div class="d-flex">
-                                        <button type="button" class="form-control me-3">
-                                            重置
-                                        </button>
+                                        <%--                                        <button type="button" class="form-control me-3">--%>
+                                        <%--                                            重置--%>
+                                        <%--                                        </button>--%>
 
                                         <button type="submit" class="form-control ms-2">
                                             保存
@@ -207,58 +236,6 @@
                                     </div>
                                 </form>
                             </div>
-                            <!-- 个人信息 -->
-                            <!-- <div class="tab-pane fade" id="password-tab-pane" role="tabpanel" aria-labelledby="password-tab" tabindex="0">
-                                    <h6 class="mb-4">用户信息</h6>
-
-                                    <form class="custom-form profile-form" action="#" method="post" role="form">
-                                        <input class="form-control" type="text" name="profile-userName"  placeholder="请输入您的姓名">
-                                        <input class="form-control" type="text" name="profile-userId"  placeholder="请输入您的学号">
-                                        <div class="input-group mb-1">
-                                            <img src="../images/profile/senior-man-white-sweater-eyeglasses.jpg" class="profile-image img-fluid" alt="">
-
-                                            <input type="file" class="form-control" id="inputGroupFile02">
-                                        </div>
-                                        <div class="d-flex">
-                                            <button type="button" class="form-control me-3">
-                                                重置
-                                            </button>
-
-                                            <button type="submit" class="form-control ms-2">
-                                                保存
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div> -->
-                            <!-- 通知 -->
-                            <!-- <div class="tab-pane fade" id="notification-tab-pane" role="tabpanel" aria-labelledby="notification-tab" tabindex="0">
-                                    <h6 class="mb-4">Notification</h6>
-
-                                    <form class="custom-form notification-form" action="#" method="post" role="form">
-
-                                        <div class="form-check form-switch d-flex mb-3 ps-0">
-                                            <label class="form-check-label" for="flexSwitchCheckCheckedOne">Account activity</label>
-
-                                            <input class="form-check-input ms-auto" type="checkbox" name="form-check-input" role="switch" id="flexSwitchCheckCheckedOne" checked>
-                                        </div>
-
-                                        <div class="form-check form-switch d-flex mb-3 ps-0">
-                                            <label class="form-check-label" for="flexSwitchCheckCheckedTwo">Payment updated</label>
-
-                                            <input class="form-check-input ms-auto" type="checkbox" name="form-check-input" role="switch" id="flexSwitchCheckCheckedTwo" checked>
-                                        </div>
-
-                                        <div class="d-flex mt-4">
-                                            <button type="button" class="form-control me-3">
-                                                Reset
-                                            </button>
-
-                                            <button type="submit" class="form-control ms-2">
-                                                Update Password
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div> -->
                         </div>
                     </div>
                 </div>

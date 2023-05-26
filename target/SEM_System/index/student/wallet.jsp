@@ -197,8 +197,8 @@
                             <table border="1px" cellpadding="5px" cellspacing="1px">
                                 <tr>
                                     <th>就业时间</th>
-                                    <th>就业单位</th>
-                                    <th>就业单位地址</th>
+                                    <th>就业公司</th>
+                                    <th>就业公司地址</th>
                                     <th>就业岗位</th>
                                     <th>薪资待遇</th>
                                     <th>单位联系人</th>
@@ -229,7 +229,7 @@
                             <form action="" method="post">
                                 <div class="addBox">
                                     <span>就业时间</span>
-                                    <input type="text">
+                                    <input type="date">
                                 </div>
                                 <div class="addBox">
                                     <span>就业公司</span>

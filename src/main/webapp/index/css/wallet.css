@@ -94,6 +94,7 @@ table tr th {
     color: #fff;
     font-weight: 500;
     border-bottom-width: 0;
+    min-width: 100px;
     }
     
     /* Column Style */
