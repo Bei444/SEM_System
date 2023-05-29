@@ -1,10 +1,12 @@
 package com.hgkj.model.service;
 
 import com.hgkj.model.entity.Teacher;
-import org.apache.ibatis.annotations.Param;
+import com.hgkj.model.entity.User;
 
 import java.util.List;
 
 public interface AdminService {
-    public List<Teacher> allTeacherByIdDao(int teacherId);
+    public List<Teacher> allTeacherByIdService(int teacherId);
+    public int updateAdminPwdService(String userPwd, String userName);
+    public User allUserByIdService(String userName);
 }

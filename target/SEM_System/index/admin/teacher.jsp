@@ -163,7 +163,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="/TeacherInformation">
+                        <a class="nav-link active" href="/teacherInformation">
                             <i class="bi-wallet me-2"></i>
                             辅导员管理
                         </a>

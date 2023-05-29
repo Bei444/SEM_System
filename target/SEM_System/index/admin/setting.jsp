@@ -186,22 +186,22 @@
                                  aria-labelledby="profile-tab" tabindex="0">
                                 <h6 class="mb-4">密码</h6>
 
-                                <form class="custom-form password-form" action="#" method="post" role="form">
+                                <form class="custom-form password-form" action="/updateAdminPwd" method="post" role="form">
                                     <input type="password" name="password" id="password" pattern="[0-9a-zA-Z]{4,10}"
                                            class="form-control" placeholder="请输入旧密码" required="">
 
-                                    <input type="password" name="confirm_password" id="confirm_password"
+                                    <input type="password" name="newOne_password" id="newOne_password"
                                            pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="请输入新密码"
                                            required="">
 
-                                    <input type="password" name="confirm_password" id="confirm_password_again"
+                                    <input type="password" name="newNow_password" id="newNow_password"
                                            pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="请再一次输入新密码"
                                            required="">
 
                                     <div class="d-flex">
-                                        <button type="button" class="form-control me-3">
-                                            重置
-                                        </button>
+<%--                                        <button type="button" class="form-control me-3">--%>
+<%--                                            重置--%>
+<%--                                        </button>--%>
 
                                         <button type="submit" class="form-control ms-2">
                                             保存
