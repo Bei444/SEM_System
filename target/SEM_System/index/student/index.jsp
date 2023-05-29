@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 北
-  Date: 2023/5/24
-  Time: 18:33
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -15,22 +8,22 @@
 
     <title>学生就业管理系统-首页</title>
 
+    <link rel="stylesheet" href="/index/css/apexcharts.css">
+    <link rel="stylesheet" href="/index/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/index/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="/index/css/index.css">
+    <link rel="stylesheet" href="/index/css/tooplate-mini-finance.css">
+    <link rel="stylesheet" href="/index/css/wallet.css">
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="/index/css/index.css" rel="stylesheet">
-    <link href="/index/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/index/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="/index/css/apexcharts.css" rel="stylesheet">
-    <link href="/index/css/tooplate-mini-finance.css" rel="stylesheet">
-    <link rel="stylesheet" href="/index/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap">
 </head>
 
 <body>
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
-        <a class="navbar-brand" href="/index/student/index.jsp">
+        <a class="navbar-brand" href="/index.jsp">
             <i class="bi-box"></i>
             学生就业管理系统
         </a>
@@ -103,7 +96,7 @@
 
             <div class="dropdown px-3">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="../../images/user.png" class="profile-image img-fluid" alt="">
+                    <img src="index/images/user.png" class="profile-image img-fluid" alt="">
                 </a>
                 <ul class="dropdown-menu bg-white shadow">
                     <li>
@@ -118,21 +111,21 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="/index/student/profile.jsp">
+                        <a class="dropdown-item" href="index/student/profile.jsp">
                             <i class="bi-person me-2"></i>
                             个人中心
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="/index/student/setting.jsp">
+                        <a class="dropdown-item" href="index/student/setting.jsp">
                             <i class="bi-gear me-2"></i>
                             设置
                         </a>
                     </li>
 
                     <li class="border-top mt-3 pt-2 mx-4">
-                        <a class="dropdown-item ms-0 me-0" href="#">
+                        <a class="dropdown-item ms-0 me-0" href="index/login/login.jsp">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>
@@ -156,14 +149,14 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/student/profile.jsp">
+                        <a class="nav-link" href="/StudentInformation">
                             <i class="bi-person me-2"></i>
                             个人中心
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/student/wallet.jsp">
+                        <a class="nav-link" href="/EmploymentInformation">
                             <i class="bi-wallet me-2"></i>
                             实习就业管理
                         </a>
@@ -178,7 +171,7 @@
 
 
                     <li class="nav-item border-top mt-auto pt-2">
-                        <a class="nav-link" href="/Login/login.jsp">
+                        <a class="nav-link" href="/index.jsp">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>
@@ -204,7 +197,6 @@
 <script src="/index/js/bootstrap.bundle.min.js"></script>
 <script src="/index/js/apexcharts.min.js"></script>
 <script src="/index/js/custom.js"></script>
-
 
 <script type="text/javascript">
     var options = {

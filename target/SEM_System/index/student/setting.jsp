@@ -213,15 +213,15 @@
                                  aria-labelledby="password-tab" tabindex="0">
                                 <h6 class="mb-4">密码</h6>
 
-                                <form class="custom-form password-form" action="#" method="post" role="form">
+                                <form class="custom-form password-form" action="/updateStudentPwd" method="post" role="form">
                                     <input type="password" name="password" id="password" pattern="[0-9a-zA-Z]{4,10}"
                                            class="form-control" placeholder="请输入旧密码" required="">
 
-                                    <input type="password" name="confirm_password" id="confirm_password"
+                                    <input type="password" name="newOne_password" id="newOne_password"
                                            pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="请输入新密码"
                                            required="">
 
-                                    <input type="password" name="confirm_password" id="confirm_password_again"
+                                    <input type="password" name="newTow_password" id="newTow_password"
                                            pattern="[0-9a-zA-Z]{4,10}" class="form-control" placeholder="请再一次输入新密码"
                                            required="">
 

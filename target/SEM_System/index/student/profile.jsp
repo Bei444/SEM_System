@@ -1,36 +1,26 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 北
-  Date: 2023/5/24
-  Time: 18:47
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<html>
+<%@taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>学生就业管理系统-个人信息</title>
-
     <!-- CSS FILES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="/index/css/bootstrap.min.css" rel="stylesheet">
     <link href="/index/css/bootstrap-icons.css" rel="stylesheet">
-    <link href="/index/css/apexcharts.css" rel="stylesheet">
     <link href="/index/css/tooplate-mini-finance.css" rel="stylesheet">
+    <link href="/index/css/wallet.css" rel="stylesheet">
 </head>
 
 <body>
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/index/student/index.jsp">
             <i class="bi-box"></i>
             学生就业管理系统
         </a>
@@ -112,27 +102,27 @@
 
                             <div class="d-flex flex-column">
                                 <small>${student.studentName}</small>
-                                <a href="#">${student.studentId}</a>
+                                <a href="#">${student.studentName}</a>
                             </div>
                         </div>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="/index/student/profile.jsp">
+                        <a class="dropdown-item" href="profile.html">
                             <i class="bi-person me-2"></i>
                             个人中心
                         </a>
                     </li>
 
                     <li>
-                        <a class="dropdown-item" href="/index/student/setting.jsp">
+                        <a class="dropdown-item" href="setting.html">
                             <i class="bi-gear me-2"></i>
                             设置
                         </a>
                     </li>
 
                     <li class="border-top mt-3 pt-2 mx-4">
-                        <a class="dropdown-item ms-0 me-0" href="/Login/login.jsp">
+                        <a class="dropdown-item ms-0 me-0" href="#">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>
@@ -155,16 +145,15 @@
                         </a>
                     </li>
 
-
                     <li class="nav-item">
-                        <a class="nav-link active" href="/index/student/profile.jsp">
+                        <a class="nav-link active" href="/StudentInformation">
                             <i class="bi-person me-2"></i>
                             个人中心
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/student/wallet.jsp">
+                        <a class="nav-link" href="/EmploymentInformation">
                             <i class="bi-wallet me-2"></i>
                             实习就业管理
                         </a>
@@ -179,7 +168,7 @@
                     </li>
 
                     <li class="nav-item border-top mt-auto pt-2">
-                        <a class="nav-link" href="/Login/login.jsp">
+                        <a class="nav-link" href="/index.jsp">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>
@@ -193,7 +182,7 @@
                 <h1 class="h2 mb-0">个人信息</h1>
             </div>
 
-            <div class="row my-4" >
+            <div class="row my-4">
                 <div class="col-lg-7 col-12">
                     <div class="custom-block custom-block-profile">
                         <div class="row">
@@ -208,6 +197,7 @@
                                     <a href="setting.html" class="bi-pencil-square custom-block-edit-icon"></a>
                                 </div>
                             </div> -->
+
                             <div class="col-lg-9 col-12">
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>姓名:</strong>
@@ -216,13 +206,27 @@
 
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>学号:</strong>
-                                    <span>${student.studentId}</span>
+                                    <span>
+                                        ${student.studentId}
+                                    </span>
                                 </p>
 
                                 <p class="d-flex flex-wrap mb-2">
                                     <strong>联系方式:</strong>
                                     <span>${student.studentTel}</span>
                                 </p>
+                                <!--
+                                                                        <p class="d-flex flex-wrap mb-2">
+                                                                            <strong>Birthday:</strong>
+
+                                                                            <span>March 5, 1992</span>
+                                                                        </p>
+
+                                                                        <p class="d-flex flex-wrap">
+                                                                            <strong>Address:</strong>
+
+                                                                            <span>551 Swanston Street, Melbourne</span>
+                                                                        </p> -->
                             </div>
                         </div>
                     </div>
@@ -279,7 +283,6 @@
 <script src="/index/js/jquery.min.js"></script>
 <script src="/index/js/bootstrap.bundle.min.js"></script>
 <script src="/index/js/custom.js"></script>
-
 
 </body>
 </html>

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -25,6 +26,7 @@ public class StudentController {
         Teacher teacher = teacherService.allTeacherByNameService(student.getTeacherName());
         student.setCollege(teacher.getCollege());
         student.setTeacherId(teacher.getTeacherId());
+        student.setSchoolRecord("在籍");
         int row = studentService.addStudent(student);
         if (row > 0) {
             modelAndView.addObject("studentId", student.getStudentId());
@@ -52,6 +54,16 @@ public class StudentController {
             }
         } else {
             modelAndView.addObject("mag", "您两次输入的密码不一致，请重新输入！");
+            modelAndView.setViewName("/index/student/setting.jsp");
+        }
+        return modelAndView;
+    }
+    @RequestMapping("/updateStudentTel")
+    public ModelAndView updateStudentTel(long studentTel,HttpSession session){
+        ModelAndView modelAndView=new ModelAndView();
+        int studentId = (int) session.getAttribute("studentId");
+        int row=studentService.updateStudentTelService(studentTel,studentId);
+        if(row>0){
             modelAndView.setViewName("/index/student/setting.jsp");
         }
         return modelAndView;

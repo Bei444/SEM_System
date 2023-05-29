@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: 北
@@ -147,7 +148,7 @@
             <div class="position-sticky py-4 px-3 sidebar-sticky">
                 <ul class="nav flex-column h-100">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/index/admin/index.html">
+                        <a class="nav-link" aria-current="page" href="/index/admin/index.jsp">
                             <i class="bi-house-fill me-2"></i>
                             首页
                         </a>
@@ -155,21 +156,21 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/admin/wallet.html">
+                        <a class="nav-link" href="/index/admin/wallet.jsp">
                             <i class="bi-wallet me-2"></i>
                             实习就业管理
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="/index/admin/teacher.html">
+                        <a class="nav-link active" href="/TeacherInformation">
                             <i class="bi-wallet me-2"></i>
                             辅导员管理
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/admin/setting.html">
+                        <a class="nav-link" href="/index/admin/setting.jsp">
                             <i class="bi-gear me-2"></i>
                             设置
                         </a>
@@ -206,6 +207,7 @@
             <div class="inputBox" id="poplayer">
                 <input type="button" onclick="popDiv();" value="添加辅导员信息">
             </div>
+            <c:forEach var="teacher" items="${teachers}">
             <div class="tableBox">
                 <table border="1px" cellpadding="5px" cellspacing="1px">
                     <tr>
@@ -217,20 +219,23 @@
                         <th>联系方式</th>
                         <th>操作</th>
                     </tr>
+
                     <tr>
-                        <td>1001</td>
-                        <td>小狗</td>
-                        <td>女</td>
-                        <td>软件工程</td>
-                        <td>计算机应用</td>
-                        <td>12345678910</td>
-                        <td>
-                            <a href="#" onclick="popDiv()">修改</a>
-                            <a href="#">删除</a>
-                        </td>
+                            <td>${teacher.teacherId}</td>
+                            <td>${teacher.teacherName}</td>
+                            <td>${teacher.teacherSex}</td>
+                            <td>${teacher.college}</td>
+                            <td>${teacher.major}</td>
+                            <td>${teacher.teacherTel}</td>
+                            <td>
+                                <a href="#" onclick="popDiv()">修改</a>
+                                <a href="#">删除</a>
+                            </td>
                     </tr>
                 </table>
             </div>
+            </c:forEach>
+
             <!-- 添加修改信息弹窗 -->
             <div id="popDiv">
                 <div class="close">

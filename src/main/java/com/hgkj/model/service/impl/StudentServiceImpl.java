@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @Transactional
 public class StudentServiceImpl implements StudentService {
@@ -31,5 +33,15 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public int updateStudentPwdService( String studentPwd,int studentId) {
         return studentDao.updateStudentPwdDao(studentPwd,studentId);
+    }
+
+    @Override
+    public int updateStudentTelService(long studentTel, int studentId) {
+        return studentDao.updateStudentTelDao(studentTel, studentId);
+    }
+
+    @Override
+    public List<Student> allStudentByTeacherIdService(int teacherId) {
+        return studentDao.allStudentByTeacherIdDao(teacherId);
     }
 }

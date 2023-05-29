@@ -30,7 +30,7 @@
 <body>
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.jsp">
             <i class="bi-box"></i>
             学生就业管理系统
         </a>
@@ -163,14 +163,14 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/teacher/profile.jsp">
+                        <a class="nav-link" href="/TeacherInformation">
                             <i class="bi-person me-2"></i>
                             个人中心
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/teacher/wallet.jsp">
+                        <a class="nav-link" href="/TeacherStudentInformation">
                             <i class="bi-wallet me-2"></i>
                             实习就业管理
                         </a>
@@ -185,7 +185,7 @@
 
 
                     <li class="nav-item border-top mt-auto pt-2">
-                        <a class="nav-link" href="/Login/login.jsp">
+                        <a class="nav-link" href="/index.jsp">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>

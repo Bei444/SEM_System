@@ -29,7 +29,7 @@
 <body>
 <header class="navbar sticky-top flex-md-nowrap">
     <div class="col-md-3 col-lg-3 me-0 px-3 fs-6">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="/index/teacher/index.jsp">
             <i class="bi-box"></i>
             学生就业管理系统
         </a>
@@ -125,14 +125,14 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/teacher/profile.jsp">
+                        <a class="nav-link" href="/TeacherInformation">
                             <i class="bi-person me-2"></i>
                             个人中心
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/teacher/wallet.jsp">
+                        <a class="nav-link" href="/TeacherStudentInformation">
                             <i class="bi-wallet me-2"></i>
                             实习就业管理
                         </a>
@@ -146,7 +146,7 @@
                     </li>
 
                     <li class="nav-item border-top mt-auto pt-2">
-                        <a class="nav-link" href="/Login/login.jsp">
+                        <a class="nav-link" href="/index.jsp">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>
@@ -191,16 +191,17 @@
 
                                 <form class="custom-form profile-form" action="#" method="post" role="form">
                                     <input type="text" name="major" id="major" pattern=""
-                                           class="form-control" placeholder="请输入专业" required="">
+                                           class="form-control" placeholder="您的权限只能修改联系方式哦！" required=""
+                                           readonly="true">
 
                                     <input type="text" name="phone" id="phone"
                                            pattern="[0-9]{1,11}" class="form-control" placeholder="请输入联系方式"
                                            required="">
 
                                     <div class="d-flex">
-<%--                                        <button type="button" class="form-control me-3">--%>
-<%--                                            重置--%>
-<%--                                        </button>--%>
+                                        <%--                                        <button type="button" class="form-control me-3">--%>
+                                        <%--                                            重置--%>
+                                        <%--                                        </button>--%>
 
                                         <button type="submit" class="form-control ms-2">
                                             保存
@@ -226,9 +227,9 @@
                                            required="">
 
                                     <div class="d-flex">
-<%--                                        <button type="button" class="form-control me-3">--%>
-<%--                                            重置--%>
-<%--                                        </button>--%>
+                                        <%--                                        <button type="button" class="form-control me-3">--%>
+                                        <%--                                            重置--%>
+                                        <%--                                        </button>--%>
 
                                         <button type="submit" class="form-control ms-2">
                                             保存

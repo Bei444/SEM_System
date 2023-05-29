@@ -11,5 +11,4 @@ public interface TeacherDao {
     public Teacher allTeacherByNameDao(@Param("teacherName")String teacherName);
     @Select("select * from teacher where teacherId=#{teacherId};")
     public Teacher allTeacherByIdDao(@Param("teacherId")int teacherId);
-
 }

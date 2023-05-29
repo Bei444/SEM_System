@@ -118,7 +118,7 @@
             <div class="position-sticky py-4 px-3 sidebar-sticky">
                 <ul class="nav flex-column h-100">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">
+                        <a class="nav-link" aria-current="page" href="/index/admin/index.jsp">
                             <i class="bi-house-fill me-2"></i>
                             首页
                         </a>
@@ -126,7 +126,7 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="wallet.html">
+                        <a class="nav-link" href="/index/admin/wallet.jsp">
                             <i class="bi-wallet me-2"></i>
                             实习就业管理
                         </a>
@@ -134,21 +134,21 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/index/admin/teacher.html">
+                        <a class="nav-link" href="/teacherInformation">
                             <i class="bi-wallet me-2"></i>
                             辅导员管理
                         </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="setting.html">
+                        <a class="nav-link active" href="/index/admin/setting.jsp">
                             <i class="bi-gear me-2"></i>
                             设置
                         </a>
                     </li>
 
                     <li class="nav-item border-top mt-auto pt-2">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="/login/login.jsp">
                             <i class="bi-box-arrow-left me-2"></i>
                             退出系统
                         </a>
