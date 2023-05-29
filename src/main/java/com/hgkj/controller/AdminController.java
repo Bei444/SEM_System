@@ -17,9 +17,10 @@ public class AdminController {
     @Autowired
     AdminService adminService;
     @RequestMapping("/teacherInformation")
-    public ModelAndView allTeacherInformation(@SessionAttribute("teacher")Teacher teacher){
+    public ModelAndView allTeacherInformation(HttpSession session){
         ModelAndView modelAndView = new ModelAndView();
-        List<Teacher> teachers = adminService.allTeacherByIdService(teacher);
+        String userName = (String) session.getAttribute("userName");
+        List<Teacher> teachers = adminService.allTeacherByIdService(userName);
         modelAndView.addObject("teachers",teachers);
         modelAndView.setViewName("/index/admin/teacher.jsp");
         return modelAndView;

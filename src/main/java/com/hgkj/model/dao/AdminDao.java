@@ -9,8 +9,8 @@ import org.apache.ibatis.annotations.Update;
 import java.util.List;
 
 public interface AdminDao {
-    @Select("select * from teacher ")
-    public List<Teacher> allTeacherByIdDao(Teacher teacher);
+    @Select("select * from teacher where userName=#{userName}")
+    public List<Teacher> allTeacherByIdDao(@Param("userName")String userName);
     @Update("update user set userPwd=#{newOne_password} where userName=#{userName}")
     public int updateAdminPwdDao(@Param("newOne_password") String newOne_password,@Param("userName")String userName);
     @Select("select * from user where userName=#{userName}")

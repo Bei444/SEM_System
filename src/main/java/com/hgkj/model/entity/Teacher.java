@@ -11,4 +11,5 @@ public class Teacher {
     private long TeacherTel;
     private String college;
     private String major;
+    private String userName;
 }
