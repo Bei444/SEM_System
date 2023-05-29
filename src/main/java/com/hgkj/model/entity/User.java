@@ -9,4 +9,5 @@ public class User {
     private String userPwd;
     private String userIdentity;
     private String addTime;
+    private Teacher teacher;
 }

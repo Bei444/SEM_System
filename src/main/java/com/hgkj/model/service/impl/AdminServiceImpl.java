@@ -14,8 +14,8 @@ public class AdminServiceImpl implements AdminService {
     @Autowired
     AdminDao adminDao;
     @Override
-    public List<Teacher> allTeacherByIdService(int teacherId) {
-        return adminDao.allTeacherByIdDao(teacherId);
+    public List<Teacher> allTeacherByIdService(Teacher teacher) {
+        return adminDao.allTeacherByIdDao(teacher);
     }
     @Override
     public int updateAdminPwdService(String userPwd, String userName) {

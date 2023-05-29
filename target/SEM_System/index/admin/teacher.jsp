@@ -207,7 +207,7 @@
             <div class="inputBox" id="poplayer">
                 <input type="button" onclick="popDiv();" value="添加辅导员信息">
             </div>
-            <c:forEach var="teacher" items="${teachers}">
+            <c:forEach var="teachers" items="${teachers}">
             <div class="tableBox">
                 <table border="1px" cellpadding="5px" cellspacing="1px">
                     <tr>
@@ -221,12 +221,12 @@
                     </tr>
 
                     <tr>
-                            <td>${teacher.teacherId}</td>
-                            <td>${teacher.teacherName}</td>
-                            <td>${teacher.teacherSex}</td>
-                            <td>${teacher.college}</td>
-                            <td>${teacher.major}</td>
-                            <td>${teacher.teacherTel}</td>
+                            <td>${teachers.teacherId}</td>
+                            <td>${teachers.teacherName}</td>
+                            <td>${teachers.teacherSex}</td>
+                            <td>${teachers.college}</td>
+                            <td>${teachers.major}</td>
+                            <td>${teachers.teacherTel}</td>
                             <td>
                                 <a href="#" onclick="popDiv()">修改</a>
                                 <a href="#">删除</a>
