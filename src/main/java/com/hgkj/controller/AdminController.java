@@ -3,10 +3,10 @@ package com.hgkj.controller;
 import com.hgkj.model.entity.Teacher;
 import com.hgkj.model.entity.User;
 import com.hgkj.model.service.AdminService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpSession;
@@ -23,6 +23,34 @@ public class AdminController {
         List<Teacher> teachers = adminService.allTeacherByIdService(userName);
         modelAndView.addObject("teachers",teachers);
         modelAndView.setViewName("/index/admin/teacher.jsp");
+        return modelAndView;
+    }
+    @RequestMapping("/addTeacherInformation")
+    public ModelAndView addTeacherInformation(Teacher teacher,HttpSession session){
+        ModelAndView modelAndView = new ModelAndView();
+        String userName = (String) session.getAttribute("userName");
+        List<Teacher> teachers = adminService.allTeacherByIdService(userName);
+        teacher.setTeacherId(teacher.getTeacherId());
+        teacher.setTeacherName(teacher.getTeacherName());
+        teacher.setTeacherPwd("1234");
+        teacher.setTeacherSex(teacher.getTeacherSex());
+        teacher.setCollege(teacher.getCollege());
+        teacher.setMajor(teacher.getMajor());
+        teacher.setTeacherTel(teacher.getTeacherTel());
+        teacher.setUserName("admin");
+        int row = adminService.addTeacherService(teacher);
+        if(row > 0){
+            modelAndView.setViewName("/teacherInformation");
+        } else{
+            modelAndView.setViewName("/teacherInformation");
+        }
+        return modelAndView;
+    }
+    @RequestMapping("/delTeacherInformation")
+    private ModelAndView delTeacherInformation(@Param("teacherId")int teacherId){
+        ModelAndView modelAndView = new ModelAndView();
+        adminService.delTeacherService(teacherId);
+        modelAndView.setViewName("/teacherInformation");
         return modelAndView;
     }
     @RequestMapping("/updateAdminPwd")
@@ -46,5 +74,4 @@ public class AdminController {
         }
         return modelAndView;
     }
-
 }

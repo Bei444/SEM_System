@@ -25,4 +25,13 @@ public class AdminServiceImpl implements AdminService {
     public User allUserByIdService(String userName) {
         return adminDao.allUserByIdDao(userName);
     }
+    @Override
+    public int addTeacherService(Teacher teacher) {
+        return adminDao.addTeacherDao(teacher);
+    }
+
+    @Override
+    public int delTeacherService(int teacherId) {
+        return adminDao.delTeacherDao(teacherId);
+    }
 }

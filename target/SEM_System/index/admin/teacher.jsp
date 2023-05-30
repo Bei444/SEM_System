@@ -207,7 +207,6 @@
             <div class="inputBox" id="poplayer">
                 <input type="button" onclick="popDiv();" value="添加辅导员信息">
             </div>
-            <c:forEach var="teachers" items="${teachers}">
             <div class="tableBox">
                 <table border="1px" cellpadding="5px" cellspacing="1px">
                     <tr>
@@ -219,7 +218,7 @@
                         <th>联系方式</th>
                         <th>操作</th>
                     </tr>
-
+                    <c:forEach var="teachers" items="${teachers}">
                     <tr>
                             <td>${teachers.teacherId}</td>
                             <td>${teachers.teacherName}</td>
@@ -228,31 +227,31 @@
                             <td>${teachers.major}</td>
                             <td>${teachers.teacherTel}</td>
                             <td>
-                                <a href="#" onclick="popDiv()">修改</a>
-                                <a href="#">删除</a>
+                                <a href="/delTeacherInformation?teacherId=${teachers.teacherId}">删除</a>
                             </td>
                     </tr>
+                    </c:forEach>
+
                 </table>
             </div>
-            </c:forEach>
 
             <!-- 添加修改信息弹窗 -->
             <div id="popDiv">
                 <div class="close">
                     <a href="javascript:void(0)" onclick="closePop()">X</a>
                 </div>
-                <form action="" method="post">
+                <form action="/addTeacherInformation" method="post">
                     <div class="addBox">
                         <span>工号</span>
-                        <input type="text">
+                        <input type="text" name="teacherId">
                     </div>
                     <div class="addBox">
                         <span>姓名</span>
-                        <input type="text">
+                        <input type="text" name="teacherName">
                     </div>
                     <div class="addBox">
                         <span>性别</span>
-                        <input type="text" list="sexlist" placeholder="请选择您的性别">
+                        <input type="text" list="sexlist" placeholder="请选择您的性别" name="teacherSex">
                         <datalist id="sexlist">
                             <option name="man">男</option>
                             <option name="women">女</option>
@@ -260,15 +259,15 @@
                     </div>
                     <div class="addBox">
                         <span>学院</span>
-                        <input type="text">
+                        <input type="text" name="college">
                     </div>
                     <div class="addBox">
                         <span>专业</span>
-                        <input type="text">
+                        <input type="text" name="major">
                     </div>
                     <div class="addBox">
                         <span>联系方式</span>
-                        <input type="text">
+                        <input type="text" name="teacherTel">
                     </div>
                     <div class="addBox submit">
                         <input type="submit" value="提交">
